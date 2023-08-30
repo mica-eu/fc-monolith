@@ -1,9 +1,9 @@
 import Id from '../../@shared/value-object/id.value-object';
 import Product from '../domain/product.entity';
-import { ProductGateway } from '../gateway/product.gateway';
+import { ProductGatewayInterface } from '../gateway/product.gateway.interface';
 import { ProductModel } from './product.model';
 
-export class ProductRepository implements ProductGateway {
+export class ProductRepository implements ProductGatewayInterface {
   async add(product: Product): Promise<void> {
     await ProductModel.create({
       id: product.id.value,

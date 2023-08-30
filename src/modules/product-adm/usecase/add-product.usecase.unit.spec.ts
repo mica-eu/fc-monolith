@@ -1,10 +1,10 @@
 import { container } from 'tsyringe';
 import { AddProductUseCase } from './add-product.usecase';
-import { ProductGateway } from '../gateway/product.gateway';
+import { ProductGatewayInterface } from '../gateway/product.gateway.interface';
 import Product from '../domain/product.entity';
 import Id from '../../@shared/value-object/id.value-object';
 
-class ProductGatewayStub implements ProductGateway {
+class ProductGatewayStub implements ProductGatewayInterface {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async add(product: Product): Promise<void> {
     return Promise.resolve();

@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe';
-import { ProductGateway } from '../gateway/product.gateway';
+import { ProductGatewayInterface } from '../gateway/product.gateway.interface';
 import { AddProductInputDto, AddProductOutputDto } from './add-product.dto';
 import Product from '../domain/product.entity';
 import { UseCase } from '../../@shared/usecase/usecase.interface';
@@ -9,7 +9,7 @@ import Id from '../../@shared/value-object/id.value-object';
 export class AddProductUseCase implements UseCase {
   constructor(
     @inject('ProductGateway')
-    private readonly productGateway: ProductGateway
+    private readonly productGateway: ProductGatewayInterface
   ) {}
 
   async execute(productInputDto: AddProductInputDto): Promise<AddProductOutputDto> {
