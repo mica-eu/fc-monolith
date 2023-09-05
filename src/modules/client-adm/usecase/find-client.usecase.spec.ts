@@ -6,8 +6,8 @@ import { FindClientUsecase } from './find-client.usecase';
 
 injectable();
 class ClientRepositoryStub implements ClientGateway {
-  add(client: Client): Promise<Client> {
-    return Promise.resolve(client);
+  add(client: Client): Promise<void> {
+    return Promise.resolve();
   }
   find(id: string): Promise<Client> {
     return Promise.resolve(new Client(new Id(id), 'any_name', 'any_email', 'any_address'));
