@@ -5,6 +5,11 @@ import { Product } from '../domain/product.entity';
 import Id from '../../@shared/value-object/id.value-object';
 
 class ProductGatewayStub implements ProductGatewayInterface {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  find(id: string): Promise<Product> {
+    throw new Error('Method not implemented.');
+  }
+
   list(): Promise<Product[]> {
     return Promise.resolve([
       new Product(new Id('1'), 'Product 1', 'Product 1 description', 10),
