@@ -19,6 +19,6 @@ export interface StoreCatalogFacadeListOutputDto {
 }
 
 export interface StoreCatalogFacadeInterface {
-  find: (id: string) => Promise<StoreCatalogFacadeFindOutputDto>;
-  list: () => Promise<StoreCatalogFacadeListOutputDto>;
+  find(id: string): Promise<StoreCatalogFacadeFindOutputDto>;
+  list(): Promise<StoreCatalogFacadeListOutputDto>;
 }
