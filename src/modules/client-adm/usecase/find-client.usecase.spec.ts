@@ -27,6 +27,8 @@ describe('FindClientUsecase', () => {
       name: 'any_name',
       email: 'any_email',
       address: 'any_address',
+      createdAt: expect.any(Date),
+      updatedAt: expect.any(Date),
     });
   });
 });

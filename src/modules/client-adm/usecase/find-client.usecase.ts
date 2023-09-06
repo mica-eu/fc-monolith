@@ -17,6 +17,8 @@ export class FindClientUsecase implements UseCase {
       name: product.name,
       email: product.email,
       address: product.address,
+      createdAt: product.createdAt,
+      updatedAt: product.updatedAt,
     };
   }
 }
