@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "start:dev": "tsnd src/infra/api/server.ts",
-    "test": "jest --runInBand",
-    "test:watch": "npm test -- --no-coverage --watch",
+    "test": "jest",
+    "test:watch": "jest --no-coverage --watch --silent",
     "lint": "eslint src"
   },
   "keywords": [],
